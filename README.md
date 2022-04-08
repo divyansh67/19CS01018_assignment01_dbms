@@ -6,13 +6,13 @@
 This is a code for a database server which uses B+ tree to store and process data.
 The code is implemented in C++.
 
-## Features
+## Operations supported
 
 - Insert a single tuple
 - Insert multiple random tuples in one go
-- Search for tuple(s) by index (range can also be given).
-- Display the B+ tree in sequential or depthwise mode.
-- Delete a key by giving index.
+- Search for tuple(s) by index (range can also be given)
+- Display the B+ tree in sequential or depthwise mode
+- Delete a key by giving index
 
 
 ## Features
