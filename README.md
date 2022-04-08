@@ -15,7 +15,7 @@ The code is implemented in C++.
 - Delete a key by giving index.
 
 
-## Implementation details
+## Features
 
 - Every tuple is stored in the database as a separate text file.
 - The B+ tree stores its filename to access it.
@@ -40,8 +40,8 @@ g++ 19CS01018_assignment01_dbms.cpp -o bplustree
 - *bplustree* is the executable file. You can name it whatever you wish.
 - All the data will be stored in the *database* folder.
 
-## Explanation
-| Function | Working |
+## Implementation details
+| Function | Implementation |
 | ------ | ------ |
 | Insert | If the node has an empty space, insert the key/reference pair into the node. If the node is already full, split it into two nodes, distributing the keys evenly between the two nodes. If the node is a leaf, take a copy of the minimum value in the second of these two nodes and repeat this insertion algorithm to insert it into the parent node. If the node is a non-leaf, exclude the middle value during the split and repeat this insertion algorithm to insert this excluded value into the parent node. |
 | Remove | Check if the value exists in this leaf node. Delete the respective File and FILE*. Shift the keys and dataPtr for the leaf Node. If sufficient Node is not available for invariant to hold then try to borrow a key from leftSibling. Transfer the maximum key from the left Sibling and resize the left Sibling Node After Tranfer. Else try to borrow a key from rightSibling.
